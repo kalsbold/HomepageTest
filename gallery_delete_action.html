@@ -11,12 +11,16 @@ function move(url)
 {
   location.href = url;
 }
+function boardViewCheck()
+{
+  var form = document.BoardViewForm;
+  return true;
+}
 </script>
 </head>
 
 <!//본문>
 <body>
-
 <div class="header-wrapper">
   <div class="menu">
     <ul>
@@ -52,53 +56,62 @@ function move(url)
     <h1>게시판</h1>
   </div>
   <h2>각종 보도 자료및 공지사항</h2>
-  <table class = "bbs" width = "800" height = "200" border = "2" bgcolor = "FFFFFF">
+  <form name = "BoardViewForm" method = "post">
+  <table summary = " 전체 테이블 구성">
     <colgroup>
       <col width= 50/>
       <col width= 500/>
       <col width= 100/>
       <col width= 50/>
     </colgroup>
-    <thead>
-      <tr>
-        <th>번  호</th>
-        <th>제  목</th>
-        <th>작성자</th>
-        <th>작성일</th>
-        <th>조회수</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align = "center"> 3 </td>
-        <td><a href = "gallery_view.html">게시판글임.3</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">1234</td>
-      </tr>
-      <tr>
-        <td align = "center"> 2 </td>
-        <td><a href = "gallery_view.html">게시판글임.2</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">123</td>
-      </tr>
-      <tr>
-        <td align = "center"> 1 </td>
-        <td><a href = "gallery_view.html">게시판글임.1</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">12</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td align = "center" colspan="5">1</td>
-      </tr>
-    </tfoot>
+    <tr>
+      <td><div align = "center"><h3><b>글 읽기</b></h3></div></td>
+    </tr>
+    <tr>
+      <td colspan = 2>
+        <table border = "1" summary= "목록 테이블 구성"  width = "800" height = "200" border = "2">
+          <tr>
+            <td align = center bgcolor= #ffffff>작성자</td>
+            <td bgcolor= #ffffe8>관리자</td>
+            <td align = center bgcolor= #ffffff>작성일</td>
+            <td bgcolor= #ffffe8>2017/01/05</td>
+          </tr>
+          <tr>
+            <td align = center bgcolor= #ffffff>E-mail</td>
+            <td bgcolor= #ffffe8>aaa@bbb.com</td>
+            <td align = center bgcolor= #ffffff>홈페이지</td>
+            <td bgcolor= #ffffe8>
+              <a href = "#" target = "_new">페이지 주소</a>
+            </td>
+          </tr>
+          <tr>
+            <td align = center bgcolor = #ffffff>제 목</td>
+            <td bgcolor = #ffffe8 colspan = 3>게시판 글입니다.</td>
+          </tr>
+          <tr>
+            <td colspan = 4><br>ㅁㄴㅇㄻㄴㅇㄻㄴㅇㄻㄴㅇㄹ<br></td>
+          </tr>
+          <tr>
+            <td colspan = 4 align = right> 조회수 : </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align = center colspan = 2>
+        <hr size = 1>
+        <div align = "center">
+          [
+          <input type = "button" value = "목록" onclick = "move('gallery.html');">|
+          <input type = "button" value = "수정" onclick = "move('gallery_update.html');">|
+          <input type = "button" value = "답변" onclick = "move('js/Board_Reply.jsp');">|
+          <input type = "button" value = "삭제" onclick = "move('js/Board_Delete.jsp');">
+          ]
+        </div>
+      </td>
+    </tr>
   </table>
-    <input type="button" value = "처음으로" onclick="move('index.html');">
-    <input type="button" value = "글쓰기" onclick="move('gallery_write.html');">
+  </form>
   <div class="clearing"></div>
 </div>
 <div class="footer">

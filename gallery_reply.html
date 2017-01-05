@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!//헤드(제목줄.)>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Networking Game Laboratory</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css' />
+  <script type="text/javascript">
+    function move(url) {
+      location.href = url;
+    }
+    function boardReplyCheck() {
+      var form = document.BoardReplyForm;
+      return true;
+    }
+  </script>
+</head>
+
+<!//본문>
+
+<body>
+  <div class="header-wrapper">
+    <div class="menu">
+      <ul>
+        <li><a href="#"><span>Home</span></a></li>
+        <li>
+          <a href="members.html">Members </a>
+        </li>
+        <li>
+          <a href="paper.html">Paper </a>
+        </li>
+        <li>
+          <a href="project.html">Project</a>
+        </li>
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li>
+          <a href="events.html">Events</a>
+        </li>
+      </ul>
+    </div>
+    <div class="clearing"></div>
+    <div class="logo-search-wrapper">
+      <div class="logo-search-container">
+        <div class="logo">
+          <img src="images/hi_mark.jpg" width="90px" height="90px" align="left" /> Networking Game Laboratory
+        </div>
+      </div>
+    </div>
+    <div class="board">
+      <div class="board-title ">
+        <h1>게시판</h1>
+      </div>
+      <h2>각종 보도 자료및 공지사항</h2>
+
+      <table summary=" 전체 테이블 구성">
+        <tr>
+          <td bgcolor = #dcdcdc height = 25 align = center>답변달기</td>
+        </tr>
+      </table><br>
+
+      <table summary="답변 테이블 구성">
+        <form name="BoardWriteForm" method="post" action="gallery_reply_action.html" onsubmit="return boardReplyCheck();">
+          <tr>
+            <td>
+              <table border width = 100% align = center>
+                <tr>
+                  <td>작성자</td>
+                  <td><input type= text name= name size= 10 maxlength= 8></td>
+                </tr>
+                <tr>
+                  <td>E-Mail</td>
+                  <td><input type= text name= email size=30></td>
+                </tr>
+                <tr>
+                  <td>홈페이지</td>
+                  <td><input type= text name= homepage size=30></td>
+                </tr>
+                <tr>
+                  <td>제 목</td>
+                  <td><input type= text name= title size=50 maxlength=30 value="Re : 게시판글."></td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>
+                    <textarea name= content rows="10" cols="70">
+                           ㅁㄴㅇㄻㄴㅇㄻㄴㅇㄹ
+                          ----------------------------------------------------------------------
+                           댓글|
+                    </textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td width = 10% align = center>비밀번호</td>
+                  <td width = 70%><input type= password name= password size= 15 maxlength=5></td>
+                </tr>
+                <tr>
+                  <td colspan=2><hr size=2>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan=3 align="center">
+                    [
+                    <input type="submit" value="답변 등록">|
+                    <input type="button" value="뒤로" onclick="history.go(-1)"> ]
+                  </td>
+                </tr>
+             </table>
+          </td>
+        </tr>
+      </form>
+    </table>
+
+<div class="clearing"></div>
+</div>
+<div class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-content">
+      <h1>홍익대학교 게임학부 소속 네트워크 게임 연구소 입니다.</h1>
+      <p>본 네트워킹 게임연구실은 ( Network Game Lavoratory ) 유.무선 통신망인 사물 인터넷(Internot Of Things), 클라우드 컴퓨팅(Cloud Computing), 그리고 이동센서통신망(Wireless
+        Sensor Network)환경에서의 연구를 진행하고 있습니다.</p>
+    </div>
+    <div class="subscribe">
+
+    </div>
+  </div>
+</div>
+<div class="copyrights">Copyright (c) 홍익대학교 게임학부 대학원 - Network Game LAB 044)860-2616. Design by <a href="http://www.alltemplateneeds.com">www.alltemplateneeds.com</a></div>
+</body>
+
+</html>

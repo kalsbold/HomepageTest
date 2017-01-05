@@ -11,12 +11,16 @@ function move(url)
 {
   location.href = url;
 }
+function boardWriteCheck()
+{
+  var form = document.BoardWriteForm;
+  return true;
+}
 </script>
 </head>
 
 <!//본문>
 <body>
-
 <div class="header-wrapper">
   <div class="menu">
     <ul>
@@ -52,53 +56,54 @@ function move(url)
     <h1>게시판</h1>
   </div>
   <h2>각종 보도 자료및 공지사항</h2>
-  <table class = "bbs" width = "800" height = "200" border = "2" bgcolor = "FFFFFF">
+  <form name = "BoardWriteForm" method = "post" action = "gallery_write_action.html" onsubmit = "return boardWriteCheck();">
+  <table summary = " 전체 테이블 구성">
     <colgroup>
-      <col width= 50/>
-      <col width= 500/>
-      <col width= 100/>
-      <col width= 50/>
+      <col width= 20%/>
+      <col width= 80%/>
     </colgroup>
-    <thead>
-      <tr>
-        <th>번  호</th>
-        <th>제  목</th>
-        <th>작성자</th>
-        <th>작성일</th>
-        <th>조회수</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align = "center"> 3 </td>
-        <td><a href = "gallery_view.html">게시판글임.3</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">1234</td>
-      </tr>
-      <tr>
-        <td align = "center"> 2 </td>
-        <td><a href = "gallery_view.html">게시판글임.2</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">123</td>
-      </tr>
-      <tr>
-        <td align = "center"> 1 </td>
-        <td><a href = "gallery_view.html">게시판글임.1</a></td>
-        <td align = "center">관리자</td>
-        <td align = "center">2017/01/05</td>
-        <td align = "center">12</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td align = "center" colspan="5">1</td>
-      </tr>
-    </tfoot>
+        <table summary= "테이블 구성">
+          <caption>글 작성하기</caption>
+          <tr>
+            <td>작성자</td>
+            <td><input type = text name = name size = 10 maxlength = 8></td>
+          </tr>
+          <tr>
+            <td>E-Mail</td>
+            <td><input type = text name = email size = 30></td>
+          </tr>
+          <tr>
+            <td>홈페이지</td>
+            <td><input type = text name = homepage size = 30></td>
+          </tr>
+          <tr>
+            <td>제 목</td>
+            <td><input type = text name = title></td>
+          </tr>
+          <tr>
+            <td>내용</td>
+            <td><textarea name = content rows = "10" cols = "100"></textarea></td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type = password name = password size = 15 maxlength = 5></td>
+          </tr>
+          <tr>
+            <td colspan = 2><hr size = 1></td>
+          </tr>
+        </table>
+    <tr>
+      <td colspan = 2>
+        <div align = "center">
+          [
+          <input type = "submit" value = "작성완료">|
+          <input type = "button" value = "뒤로" onclick = "move('gallery.html');">
+          ]
+        </div>
+      </td>
+    </tr>
   </table>
-    <input type="button" value = "처음으로" onclick="move('index.html');">
-    <input type="button" value = "글쓰기" onclick="move('gallery_write.html');">
+  </form>
   <div class="clearing"></div>
 </div>
 <div class="footer">
